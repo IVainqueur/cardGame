@@ -1,0 +1,71 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-image: url('../../needed/back.png');
+    background-size: 100%;
+    animation: moveBG 10s infinite;
+    height: 100vh;
+}
+#content{
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    height: 400px;
+    width: 400px;
+    background-color: rgba(255, 255, 255, 0.829);
+    color: black;
+    padding: 40px;
+    border-radius: 6px;
+}
+#content button{
+    padding: 20px 50px;
+    margin-top: 20px;
+    border: none;
+    outline: none;
+    font-weight: bold;
+    transition: .4s ease;
+    cursor: pointer;
+}
+#content button:hover{
+    transform: scale(1.09);
+}
+#content #accept{
+    background: rgb(12, 99, 57);
+    color: white;
+}
+#content #decline{
+    background: white;
+    color: rgb(12, 99, 57);
+}
+#content input{
+    height: 60px;
+    width: 100%;
+    border: none;
+    border-radius: 2px;
+    outline: none;
+    padding: 10px;
+    margin-top: 20px;
+    font-size: 100%;
+}
+#gameNow{
+    background: white;
+    color: black;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: 40px;
+}
+/* #content h1{
+    color: white;
+} */
+@keyframes moveBG{
+    50%{
+        background-size: 102%;
+    }
+    100%{
+        background-size: 100%;
+    }
+}

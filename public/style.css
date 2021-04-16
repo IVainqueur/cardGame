@@ -1,0 +1,58 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+}
+body{
+    background-image: url('/needed/back.png');
+    background-size: 100%;
+    animation: moveBG 10s infinite;
+}
+h1{
+    color: white;
+    
+}
+#Intro{
+    width: 50%;
+    height: 100vh;
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 70px;
+}
+button{
+    margin-top: 30px;
+    padding: 20px 50px;
+    background: black;
+    color: white;
+    border: none;
+    outline: none;
+    /* margin: auto; */
+    font-weight: bold;
+    transition: .9s ease;
+    animation: moveBG2 3s infinite; 
+    /* background: linear-gradient(90deg, white 100%, black 0%); */
+}
+button:hover{
+    background: white;
+    /* animation: moveBG2 10s infinite; */
+    color: black;
+}
+
+@keyframes moveBG{
+    50%{
+        background-size: 102%;
+    }
+    100%{
+        background-size: 100%;
+    }
+}
+/* @keyframes moveBG2{
+    0%{
+        background: linear-gradient(90deg, white 50%, black 50%);
+    }
+    100%{
+        background: linear-gradient(120deg, white 50%, black 50%);
+    }
+} */

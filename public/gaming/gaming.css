@@ -1,0 +1,151 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* color: white; */
+}
+body{
+    background-image: url('../../needed/back.png');
+    background-size: 100%;
+    animation: moveBG 10s infinite;
+    overflow: hidden;
+    
+}
+#title{
+    color: white;
+}
+#content{
+    height: 100vh;
+    width: 100%;
+    padding: 70px;
+}
+#new{
+    font-size: 400%;
+    background: white;
+    color: rgba(0, 0, 0, 1);
+    font-weight: bolder;
+    height: fit-content;
+    width: fit-content;
+    text-align: center;
+    padding: 70px;
+    margin-top: 20px;
+    border-radius: 3px;
+    box-shadow: 3px 3px 15px rgba(0, 0, 0, .7);
+    transition: .2s ease;
+    animation: newGame 1s infinite;
+    /* z-index: 2; */
+}
+#new:hover{
+    box-shadow: 3px 3px 25px rgba(0, 0, 0, .9);
+    transform: scale(1.030);
+    /* animation: vibrate 5s infinite; */
+    animation: newGame 3s ease-out;
+}
+#cover{
+    display: none;
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    background: rgba(0, 0, 0, .4);
+    top: 0;
+    z-index: 2;
+    transition: 1s ease;
+}
+#popOut{
+    /* display: block; */
+    z-index: 3;
+    height: 80vh;
+    width: 50%;
+    border-radius: 6px;
+    background: rgba(255, 255, 255, 0.788);
+    position: absolute;
+    right: -70%;
+    top: 10%;
+    color: black;
+    padding: 30px;
+    transition: .4s ease-out;
+}
+#popOut input{
+    width: 90%;
+    padding: 10px;
+    background: white;
+    height: 50px;
+    border-radius: 2px;
+    border: none;
+    outline: none;
+    margin: 20px;
+    font-size: 100%;
+    /* font-weight: bold; */
+}
+#numPlayers{
+    padding: 10px;
+    background: white;
+    height: 50px;
+    width: 70px;
+    border-radius: 2px;
+    border: none;
+    outline: none;
+    margin: 20px;
+    margin-top: 0;
+    
+}
+
+#label1{
+    margin-left: 20px;
+}
+#invite{
+    margin: 30px;
+    padding: 20px 50px;
+    background: black;
+    color: white;
+    border: none;
+    outline: none;
+    /* margin: auto; */
+    font-weight: bold;
+    transition: .9s ease;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+#invite:hover{
+    background: white;
+    color: black;
+}
+
+
+@keyframes moveBG{
+    50%{
+        background-size: 102%;
+    }
+    100%{
+        background-size: 100%;
+    }
+}
+/* @keyframes vibrate{
+    25%{
+        transform: rotate(3deg);
+    }
+    50%{
+        transform:rotate(-3deg)
+    }
+    75%{
+        transform: rotate(-3deg);
+    }
+    100%{
+        transform: rotate(3deg);
+    }
+} */
+
+@keyframes newGame{
+    50%{
+        transform: scale(1.019);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+@keyframes popIn{
+    100%{
+        right: 30px;
+    }
+}
